@@ -1,0 +1,90 @@
+.hero {
+  z-index: -2;
+  height: 100vh;
+  //background-color: rgb(9, 9, 12);
+  background: linear-gradient(
+      90deg,
+      rgb(0, 0, 0) 25%,
+      rgba(0, 0, 0, 0.89) 50%,
+      rgba(0, 0, 0, 0.938)
+    ),
+    url("../../assets/venom-poster-new-1200-1703-81-s.webp");
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  text-shadow: 4px 4px 14px #000;
+
+  h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    color: rgb(252, 252, 252);
+    font-family: "Anton", sans-serif;
+    font-size: 9rem;
+    animation: slide-right;
+    animation-duration: 1.7s;
+    animation-fill-mode: both;
+
+    line-height: 100px;
+  }
+}
+.head {
+  height: 110vh;
+
+  animation-name: breathe;
+  animation-duration: 7.5s;
+  perspective-origin: top;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  z-index: 52;
+}
+.shoulder {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transform: scale(1.7);
+  height: 100vh;
+  animation-name: breatheBody;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-600px);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes breathe {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes breatheBody {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

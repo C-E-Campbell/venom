@@ -1,0 +1,19 @@
+nav {
+	position: absolute;
+	background: transparent;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	height: 3rem;
+	font-size: 1.5rem;
+	a {
+		color: rgb(180, 180, 180);
+		text-decoration: none;
+		margin-right: 3rem;
+		&:hover {
+			color: #fff;
+			border-bottom: 3px solid rgb(27, 27, 136);
+		}
+	}
+}
